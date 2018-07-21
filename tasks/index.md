@@ -1,14 +1,6 @@
 # 小区物业提升任务列表
 
 
-
-
-
-
-There should be whitespace between paragraphs.
-
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
-
 # 现物业管理监督
 
 | 任务名称        | 参与业主         | 介绍时间 |
@@ -28,6 +20,10 @@ There should be whitespace between paragraphs. We recommend including a README, 
 ## 公开招标
 
 ### 找招标代理公司
+
+### 组建定标委员会
+
+### 商定定标标准
 
 ## 新老物业交接
 
