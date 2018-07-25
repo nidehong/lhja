@@ -36,7 +36,7 @@
 
     - ### 联系招标代理公司
 
-    - ### 组建定标委员会 [点击了解详情](./dingbiaoweiyuanhui.html)
+    - ### 组建定标委员会 [点击了解详情](/tender/dingbiaoweiyuanhui.html)
 
     - ### 商定定标标准
 
