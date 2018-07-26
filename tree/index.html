@@ -5,8 +5,10 @@
 	<!-- 
 	0, three colun
 	1, load json file
+	1.1 clolr the tree
 	2, expand
 	3, search
+	4, link tree node
 	
 	force with hyperline --> <!-- share the hyperline -->
     <link href="./dist/css/bootstrap.css" rel="stylesheet">
@@ -31,7 +33,7 @@
 	  
   	<script type="text/javascript">
 		var tableOfContent = $.getJSON("table_of_content.json");
-		var $tree = $('#treeviewTableOfContent').treeview({
+		var $treeviewTableOfContent = $('#treeviewTableOfContent').treeview({
           data: tableOfContent
         });
 	</script>
