@@ -2,14 +2,14 @@
 <html>
   <head>
     <title>Bootstrap Tree View</title>
-	<!-- 
+	<!--
 	0, three colun
 	1, load json file
 	1.1 clolr the tree
 	2, expand
 	3, search
 	4, link tree node
-	
+
 	force with hyperline --> <!-- share the hyperline -->
     <link href="./dist/css/bootstrap.css" rel="stylesheet">
   </head>
@@ -17,37 +17,88 @@
   	<div class="container">
     	<h1>Bootstrap Tree View</h1>
       <br>
-	  
+
 	  <div class="row">
 		<div class="col-sm-4"></div>
 		<div class="col-sm-4"></div>
 			<div id="treeviewTableOfContent" class=""></div>
 		<div class="col-sm-4"></div>
 	  </div>
-	  
-	  
-	  
-	  
-	  
-	  
-	  
+
+
+
+
+
+
+
   	<script type="text/javascript">
 		var tableOfContent = $.getJSON("table_of_content.json");
 		var $treeviewTableOfContent = $('#treeviewTableOfContent').treeview({
-          data: tableOfContent
+          data: defaultData
         });
+    var defaultData = [
+          {
+            text: 'Parent 1',
+            href: '#parent1',
+            tags: ['4'],
+            nodes: [
+              {
+                text: 'Child 1',
+                href: '#child1',
+                tags: ['2'],
+                nodes: [
+                  {
+                    text: 'Grandchild 1',
+                    href: '#grandchild1',
+                    tags: ['0']
+                  },
+                  {
+                    text: 'Grandchild 2',
+                    href: '#grandchild2',
+                    tags: ['0']
+                  }
+                ]
+              },
+              {
+                text: 'Child 2',
+                href: '#child2',
+                tags: ['0']
+              }
+            ]
+          },
+          {
+            text: 'Parent 2',
+            href: '#parent2',
+            tags: ['0']
+          },
+          {
+            text: 'Parent 3',
+            href: '#parent3',
+             tags: ['0']
+          },
+          {
+            text: 'Parent 4',
+            href: '#parent4',
+            tags: ['0']
+          },
+          {
+            text: 'Parent 5',
+            href: '#parent5'  ,
+            tags: ['0']
+          }
+        ];
 	</script>
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
+
+
+
+
+
+
+
+
+
+
+
       <div class="row">
         <div class="col-sm-4">
           <h2>Default</h2>
@@ -351,57 +402,7 @@
 
   		$(function() {
 
-        var defaultData = [
-          {
-            text: 'Parent 1',
-            href: '#parent1',
-            tags: ['4'],
-            nodes: [
-              {
-                text: 'Child 1',
-                href: '#child1',
-                tags: ['2'],
-                nodes: [
-                  {
-                    text: 'Grandchild 1',
-                    href: '#grandchild1',
-                    tags: ['0']
-                  },
-                  {
-                    text: 'Grandchild 2',
-                    href: '#grandchild2',
-                    tags: ['0']
-                  }
-                ]
-              },
-              {
-                text: 'Child 2',
-                href: '#child2',
-                tags: ['0']
-              }
-            ]
-          },
-          {
-            text: 'Parent 2',
-            href: '#parent2',
-            tags: ['0']
-          },
-          {
-            text: 'Parent 3',
-            href: '#parent3',
-             tags: ['0']
-          },
-          {
-            text: 'Parent 4',
-            href: '#parent4',
-            tags: ['0']
-          },
-          {
-            text: 'Parent 5',
-            href: '#parent5'  ,
-            tags: ['0']
-          }
-        ];
+
 
         var alternateData = [
           {
@@ -625,7 +626,7 @@
         $('#chk-select-multi:checkbox').on('change', function () {
           console.log('multi-select change');
           $selectableTree = initSelectableTree();
-          selectableNodes = findSelectableNodes();          
+          selectableNodes = findSelectableNodes();
         });
 
         // Select/unselect/toggle nodes
