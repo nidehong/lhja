@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+
     <title>Bootstrap Tree View</title>
 	<!--
 	0, three colun
@@ -29,7 +29,7 @@
     </div>
 		<div class="col-sm-4">search result
 <div id="tree1" class=""></div>
-
+tree1
     </div>
 	  </div>
 
@@ -103,16 +103,27 @@
                   data: defaultData
                 });
 
-
-var tableOfContent = $.getJSON("table_of_content.json");
-
-var $tree1 = $('#tree1').treeview({
-      data: tableOfContent
-    });
-
-
-
   		});
+
+
+
+      $(document).ready(function(){
+      	var treeData;
+      	$.ajax({
+      	  type: "GET",
+      	  url: "response.php",
+      	  dataType: "json",
+      	  success: function(response)
+      	  {
+      		initTree(response)
+      	  }
+      	});
+      	function initTree(treeData) {
+      		$('#tree1').treeview({data: treeData});
+      	}
+      });
+
+
   	</script>
   </body>
 </html>
