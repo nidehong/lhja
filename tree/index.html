@@ -23,8 +23,14 @@
 		<div class="col-sm-4">
 			<div id="treeviewTableOfContent" class=""></div>
     </div>
-		<div class="col-sm-4">search result</div>
+		<div class="col-sm-4">search result
+<div id="tree1" class=""></div>
+
+    </div>
 	  </div>
+
+
+
 
 
 
@@ -36,8 +42,6 @@
 
   	<script type="text/javascript">
   		$(function() {
-
-        //var tableOfContent = $.getJSON("table_of_content.json");
 
         var defaultData = [
               {
@@ -94,6 +98,14 @@
             var $treeviewTableOfContent = $('#treeviewTableOfContent').treeview({
                   data: defaultData
                 });
+
+
+var tableOfContent = $.getJSON("table_of_content.json");
+
+var $tree1 = $('#tree1').treeview({
+      data: tableOfContent
+    });
+
 
 
   		});
