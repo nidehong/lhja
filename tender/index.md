@@ -7,7 +7,7 @@
 
 - ## 流程与进度 [点击了解详情](./progress.html)
 
-- ## 定标委员会
+- ## 定标委员会 [点击了解详情](./dingbiaoweiyuanhui.html)
 
 - ## 定标标准
 
