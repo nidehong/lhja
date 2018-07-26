@@ -9,7 +9,7 @@
 
 - ## 定标委员会 [点击了解详情](./dingbiaoweiyuanhui.html)
 
-- ## 定标标准
+- ## 定标标准 [点击了解详情](./howtoselect.html)
 
 - ## 文档
 
