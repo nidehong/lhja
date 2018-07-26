@@ -2,12 +2,50 @@
 <html>
   <head>
     <title>Bootstrap Tree View</title>
+	<!-- 
+	0, three colun
+	1, load json file
+	2, expand
+	3, search
+	
+	force with hyperline --> <!-- share the hyperline -->
     <link href="./dist/css/bootstrap.css" rel="stylesheet">
   </head>
   <body>
   	<div class="container">
     	<h1>Bootstrap Tree View</h1>
       <br>
+	  
+	  <div class="row">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4"></div>
+			<div id="treeviewTableOfContent" class=""></div>
+		<div class="col-sm-4"></div>
+	  </div>
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+  	<script type="text/javascript">
+		var tableOfContent = $.getJSON("table_of_content.json");
+		var $tree = $('#treeviewTableOfContent').treeview({
+          data: tableOfContent
+        });
+	</script>
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
       <div class="row">
         <div class="col-sm-4">
           <h2>Default</h2>
