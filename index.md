@@ -8,3 +8,5 @@
 # 小区资料
 
 # 小区微信群
+
+# [小区物业管理综合水平分级标准](./property-management-standard.html)
