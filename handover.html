@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>罗湖金岸交接商谈记录</title>
+    <link href="./dist/css/bootstrap.css" rel="stylesheet">
+  </head>
+  <body>
+
+	<style>
+
+	body {
+  line-height: 1.25;
+}
+
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+
+table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+
+table th,
+table td {
+  padding: .625em;
+  text-align: center;
+}
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+	</style>
+
+	<table>
+  <caption>罗湖金岸交接商谈记录</caption>
+  <thead>
+    <tr>
+      <th scope="col">商谈问题</th>
+      <th scope="col">金岸物业或开发商意见</th>
+      <th scope="col">业委会意见</th>
+      <th scope="col">商谈结果</th>
+    </tr>
+  </thead>
+  <!------------------------ 正文 --------------------------------->
+  <tbody>
+    <tr>
+      <td data-label="Account">Visa - 3412</td>
+      <td data-label="Due Date">04/01/2016</td>
+      <td data-label="Amount">$1,190</td>
+      <td data-label="Period">03/01/2016 - 03/31/2016</td>
+    </tr>
+    <tr>
+      <td scope="row" data-label="Account">Visa - 6076</td>
+      <td data-label="Due Date">03/01/2016</td>
+      <td data-label="Amount">$2,443</td>
+      <td data-label="Period">02/01/2016 - 02/29/2016</td>
+    </tr>
+    <tr>
+      <td scope="row" data-label="Account">Corporate AMEX</td>
+      <td data-label="Due Date">03/01/2016</td>
+      <td data-label="Amount">$1,181</td>
+      <td data-label="Period">02/01/2016 - 02/29/2016</td>
+    </tr>
+    <tr>
+      <td scope="row" data-label="Acount">Visa - 3412</td>
+      <td data-label="Due Date">02/01/2016</td>
+      <td data-label="Amount">$842</td>
+      <td data-label="Period">01/01/2016 - 01/31/2016</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	</body>
+    	<h1>Bootstrap Tree View</h1>
+      <br>
+
+	  <div class="row">
+		<div class="col-sm-4">search</div>
+		<div class="col-sm-4">
+			<div id="treeviewTableOfContent" class=""></div>
+    </div>
+		<div class="col-sm-4">search result
+<div id="tree1" class=""></div>
+tree1
+    </div>
+	  </div>
+
+
+
+
+
+
+
+
+
+    <script src="./dist/js/jquery.js"></script>
+  	<script src="./dist/js/bootstrap-treeview.js"></script>
+
+  	<script type="text/javascript">
+  		$(function() {
+
+        var defaultData = [
+              {
+                text: 'Parent 1',
+                href: '#parent1',
+                tags: ['4'],
+                nodes: [
+                  {
+                    text: 'Child 1',
+                    href: '#child1',
+                    tags: ['2'],
+                    nodes: [
+                      {
+                        text: 'Grandchild 1',
+                        href: '#grandchild1',
+                        tags: ['0']
+                      },
+                      {
+                        text: 'Grandchild 2',
+                        href: '#grandchild2',
+                        tags: ['0']
+                      }
+                    ]
+                  },
+                  {
+                    text: 'Child 2',
+                    href: '#child2',
+                    tags: ['0']
+                  }
+                ]
+              },
+              {
+                text: 'Parent 2',
+                href: '#parent2',
+                tags: ['0']
+              },
+              {
+                text: 'Parent 3',
+                href: '#parent3',
+                 tags: ['0']
+              },
+              {
+                text: 'Parent 4',
+                href: '#parent4',
+                tags: ['0']
+              },
+              {
+                text: 'Parent 5',
+                href: '#parent5'  ,
+                tags: ['0']
+              }
+            ];
+
+            var $treeviewTableOfContent = $('#treeviewTableOfContent').treeview({
+                  data: defaultData
+                });
+
+  		});
+
+
+
+      $(document).ready(function(){
+      	var treeData;
+      	$.ajax({
+      	  type: "GET",
+      	  url: "table_of_content.json",
+      	  dataType: "json",
+      	  success: function(response)
+      	  {
+      		initTree(response)
+      	  }
+      	});
+      	function initTree(treeData) {
+      		$('#tree1').treeview({data: treeData});
+      	}
+      });
+
+
+  	</script>
+  </body>
+</html>
