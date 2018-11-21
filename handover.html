@@ -109,13 +109,13 @@ table th {
       <th scope="col">商谈结果</th>
     </tr>
   </thead>
-  <!------------------------ 正文 --------------------------------->
+  <!------------------------ 正文从这里开始  --------------------------------->
   <tbody>
     <tr>
       <td scope="row" data-label="商谈问题">新老物业交接时间</td>
       <td data-label="金岸物业或开发商">未表态</td>
-      <td data-label="业委会意见">业委会已发函告现管理处，开发商，工作站，街道办，住建局等单位，新老物业交接的时间是2018年11月30号早上9点整。</td>
-      <td data-label="商谈结果">02/01/2016 - 02/29/2016</td>
+      <td data-label="业委会意见">业委会已发函告知业主，现管理处，开发商，工作站，街道办，住建局，派出所等单位，新老物业交接的时间是2018年11月30号早上9点整。</td>
+      <td data-label="商谈结果">待现管理处明确回复</td>
     </tr>
     <tr>
       <td data-label="商谈问题">地下停车场</td>
@@ -139,123 +139,6 @@ table th {
   </tbody>
 </table>
 
-
-
-
-
-
-
-
-
-
-
-
 	</body>
-    	<h1>Bootstrap Tree View</h1>
-      <br>
 
-	  <div class="row">
-		<div class="col-sm-4">search</div>
-		<div class="col-sm-4">
-			<div id="treeviewTableOfContent" class=""></div>
-    </div>
-		<div class="col-sm-4">search result
-<div id="tree1" class=""></div>
-tree1
-    </div>
-	  </div>
-
-
-
-
-
-
-
-
-
-    <script src="./dist/js/jquery.js"></script>
-  	<script src="./dist/js/bootstrap-treeview.js"></script>
-
-  	<script type="text/javascript">
-  		$(function() {
-
-        var defaultData = [
-              {
-                text: 'Parent 1',
-                href: '#parent1',
-                tags: ['4'],
-                nodes: [
-                  {
-                    text: 'Child 1',
-                    href: '#child1',
-                    tags: ['2'],
-                    nodes: [
-                      {
-                        text: 'Grandchild 1',
-                        href: '#grandchild1',
-                        tags: ['0']
-                      },
-                      {
-                        text: 'Grandchild 2',
-                        href: '#grandchild2',
-                        tags: ['0']
-                      }
-                    ]
-                  },
-                  {
-                    text: 'Child 2',
-                    href: '#child2',
-                    tags: ['0']
-                  }
-                ]
-              },
-              {
-                text: 'Parent 2',
-                href: '#parent2',
-                tags: ['0']
-              },
-              {
-                text: 'Parent 3',
-                href: '#parent3',
-                 tags: ['0']
-              },
-              {
-                text: 'Parent 4',
-                href: '#parent4',
-                tags: ['0']
-              },
-              {
-                text: 'Parent 5',
-                href: '#parent5'  ,
-                tags: ['0']
-              }
-            ];
-
-            var $treeviewTableOfContent = $('#treeviewTableOfContent').treeview({
-                  data: defaultData
-                });
-
-  		});
-
-
-
-      $(document).ready(function(){
-      	var treeData;
-      	$.ajax({
-      	  type: "GET",
-      	  url: "table_of_content.json",
-      	  dataType: "json",
-      	  success: function(response)
-      	  {
-      		initTree(response)
-      	  }
-      	});
-      	function initTree(treeData) {
-      		$('#tree1').treeview({data: treeData});
-      	}
-      });
-
-
-  	</script>
-  </body>
 </html>
